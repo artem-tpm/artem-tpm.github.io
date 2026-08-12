@@ -52,11 +52,11 @@ const ogImageURL = new URL("/og-image.png", Astro.site);
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body class="antialiased selection:bg-cyan-300/20">
+  <body class="antialiased bg-[#f7f8fa] text-[#111827]">
     <slot />
     <script>
       const revealEls = document.querySelectorAll(".reveal");
@@ -72,6 +72,20 @@ const ogImageURL = new URL("/og-image.png", Astro.site);
         { threshold: 0.15 }
       );
       revealEls.forEach((el) => observer.observe(el));
+
+      const onScroll = () => {
+        document.body.classList.toggle("is-scrolled", window.scrollY > 8);
+      };
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+
+      document.querySelectorAll<HTMLElement>(".spotlight").forEach((el) => {
+        el.addEventListener("pointermove", (e) => {
+          const rect = el.getBoundingClientRect();
+          el.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+          el.style.setProperty("--my", `${e.clientY - rect.top}px`);
+        });
+      });
     </script>
   </body>
 </html>

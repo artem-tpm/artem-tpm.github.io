@@ -9,16 +9,16 @@ const courses = [
 
 <section id="courses" class="px-6 py-28">
   <div class="mx-auto max-w-6xl">
-    <h2 class="reveal text-sm font-mono text-cyan-300/80 mb-3">03 — Courses</h2>
-    <h3 class="reveal text-2xl sm:text-3xl text-white/90 mb-12">Courses &amp; certifications</h3>
-    <ul class="reveal divide-y divide-white/10 rounded-2xl border border-white/10 bg-white/[0.02]">
+    <h2 class="reveal eyebrow text-xs font-semibold uppercase text-[#a9791f] mb-3">Education</h2>
+    <h3 class="reveal font-serif-heading text-2xl sm:text-3xl text-[#111827] mb-12">Courses &amp; certifications</h3>
+    <ul class="reveal card-sheen divide-y divide-[#e3e6ec] rounded-xl border border-[#e3e6ec] bg-white shadow-[0_20px_40px_-30px_rgba(17,24,39,0.15)]">
       {courses.map((course) => (
-        <li class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 px-6 py-5">
+        <li class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 px-6 py-5 transition-colors hover:bg-[#f7f8fa]">
           <div>
-            <p class="text-white/85">{course.name}</p>
-            <p class="text-sm text-white/45">{course.org}</p>
+            <p class="text-[#111827]">{course.name}</p>
+            <p class="text-sm text-[#5b6472]">{course.org}</p>
           </div>
-          <span class="text-sm font-mono text-white/40">{course.year}</span>
+          <span class="text-sm text-[#5b6472]">{course.year}</span>
         </li>
       ))}
     </ul>
