@@ -1,0 +1,57 @@
+---
+const projects = [
+  {
+    title: "Platform Migration Program",
+    period: "2025",
+    description:
+      "Placeholder — describe a completed project: the goal, your role as TPM, the teams involved, and the measurable outcome.",
+    tags: ["Program Mgmt", "Cloud Migration", "Cross-team"],
+  },
+  {
+    title: "ML Feature Rollout",
+    period: "2024",
+    description:
+      "Placeholder — a program you drove end-to-end, from scoping through launch, including how you handled risk and dependencies.",
+    tags: ["Roadmapping", "ML/AI", "Stakeholder Mgmt"],
+  },
+  {
+    title: "Internal Developer Tooling",
+    period: "2023",
+    description:
+      "Placeholder — a project that improved engineering velocity or process, with a quantified before/after result.",
+    tags: ["DevEx", "Process", "Automation"],
+  },
+  {
+    title: "Global Launch Coordination",
+    period: "2022",
+    description:
+      "Placeholder — a multi-region or multi-team launch you coordinated, highlighting scale and complexity.",
+    tags: ["Launch", "Ops", "Risk Mgmt"],
+  },
+];
+---
+
+<section id="projects" class="px-6 py-28">
+  <div class="mx-auto max-w-6xl">
+    <h2 class="reveal text-sm font-mono text-cyan-300/80 mb-3">02 — Projects</h2>
+    <h3 class="reveal text-2xl sm:text-3xl text-white/90 mb-12">Completed projects</h3>
+    <div class="grid gap-6 sm:grid-cols-2">
+      {projects.map((project) => (
+        <div class="reveal card-glow rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition-transform hover:-translate-y-1">
+          <div class="flex items-baseline justify-between">
+            <h4 class="text-lg font-medium text-white/90">{project.title}</h4>
+            <span class="text-xs font-mono text-white/40">{project.period}</span>
+          </div>
+          <p class="mt-3 text-sm text-white/60 leading-relaxed">{project.description}</p>
+          <div class="mt-5 flex flex-wrap gap-2">
+            {project.tags.map((tag) => (
+              <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-white/50">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

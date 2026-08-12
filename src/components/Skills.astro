@@ -1,0 +1,41 @@
+---
+const groups = [
+  {
+    label: "Languages",
+    items: ["Python", "JavaScript/TypeScript", "SQL", "Go"],
+  },
+  {
+    label: "Technologies",
+    items: ["AWS", "Docker", "Kubernetes", "GitHub Actions", "React", "Astro"],
+  },
+  {
+    label: "PM Tools",
+    items: ["Jira", "Confluence", "Asana", "Linear", "Smartsheet"],
+  },
+  {
+    label: "Practices",
+    items: ["Agile/Scrum", "Roadmapping", "Risk Management", "OKRs"],
+  },
+];
+---
+
+<section id="skills" class="px-6 py-28">
+  <div class="mx-auto max-w-6xl">
+    <h2 class="reveal text-sm font-mono text-cyan-300/80 mb-3">04 — Skills</h2>
+    <h3 class="reveal text-2xl sm:text-3xl text-white/90 mb-12">Languages &amp; technologies</h3>
+    <div class="grid gap-8 sm:grid-cols-2">
+      {groups.map((group) => (
+        <div class="reveal">
+          <h4 class="text-sm text-white/50 mb-4">{group.label}</h4>
+          <div class="flex flex-wrap gap-2">
+            {group.items.map((item) => (
+              <span class="rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-sm text-white/75 hover:border-cyan-300/40 hover:text-white transition-colors">
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

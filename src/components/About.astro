@@ -1,0 +1,35 @@
+---
+const stats = [
+  { value: "7+", label: "years in tech programs" },
+  { value: "20+", label: "cross-functional launches" },
+  { value: "3", label: "engineering orgs led through" },
+];
+---
+
+<section id="about" class="px-6 py-28">
+  <div class="mx-auto max-w-6xl grid gap-12 md:grid-cols-5 md:gap-16">
+    <div class="reveal md:col-span-3">
+      <h2 class="text-sm font-mono text-cyan-300/80 mb-3">01 — About</h2>
+      <p class="text-2xl sm:text-3xl text-white/90 leading-snug">
+        Placeholder bio: replace this with your real story — where you've
+        worked, the kind of programs you run, and what makes your approach
+        different.
+      </p>
+      <p class="mt-6 text-white/60 leading-relaxed">
+        This paragraph is placeholder content. Use it to describe your
+        background — e.g. moving from a hands-on engineering role into
+        technical program management, the domains you've worked in
+        (infrastructure, ML platforms, consumer apps, etc.), and the size
+        and shape of the teams and roadmaps you've owned.
+      </p>
+    </div>
+    <div class="reveal md:col-span-2 grid grid-cols-3 gap-4 content-start sm:grid-cols-1 sm:gap-6">
+      {stats.map((stat) => (
+        <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
+          <div class="text-3xl font-semibold text-gradient">{stat.value}</div>
+          <div class="mt-1 text-sm text-white/50">{stat.label}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
