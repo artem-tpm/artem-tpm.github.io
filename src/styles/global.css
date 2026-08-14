@@ -17,15 +17,18 @@ html {
   scroll-behavior: smooth;
 }
 
+body, a, button, p, h1, h2, h3, h4, h5, h6, span, li {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
 body {
   position: relative;
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-sans);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
 }
 
 /* Fixed, whole-page grain texture for a tactile, premium finish */
