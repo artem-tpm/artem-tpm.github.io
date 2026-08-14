@@ -1,24 +1,60 @@
 ---
-const courses = [
-  { name: "Technical Program Management Certificate", org: "Placeholder Institution", year: "2024" },
-  { name: "Advanced Cloud Architecture", org: "Placeholder Institution", year: "2023" },
-  { name: "Agile & Scrum Leadership", org: "Placeholder Institution", year: "2022" },
-  { name: "Data Structures & Algorithms", org: "Placeholder Institution", year: "2021" },
+const education = [
+  { name: "Master of Computer Science", org: "Vinnitsia National Technical University, Ukraine", year: "2002–2007" },
+  { name: "Master Degree in Electrical Engineering", org: "Vinnitsia National Technical University, Ukraine", year: "2021–2022" },
+];
+
+const certifications = [
+  { name: "Cursor AI: Build Web App with AI", org: "Warsaw, PL", year: "Sept 2025" },
+  { name: "AI Video School Fundamentals", org: "Warsaw, PL", year: "Sept 2025" },
+  { name: "The Complete Python Bootcamp", org: "Warsaw, PL", year: "Aug 2025" },
+  { name: "OSINT: Open Source Intelligence", org: "Warsaw, PL", year: "Apr 2025" },
+  { name: "State Diploma, Polish B1 Level Exam", org: "Warsaw, PL", year: "Mar 2025" },
+  { name: "Master WordPress", org: "Warsaw, PL", year: "Mar 2025" },
+  { name: "The Complete Cyber Security Course", org: "Warsaw, PL", year: "Jan 2025" },
+  { name: "The Product Management for AI and Data Science", org: "Warsaw, PL", year: "Dec 2024" },
+  { name: "Blockchain and Crypto Foundation", org: "Warsaw, PL", year: "Dec 2024" },
+  { name: "AI Foundation: Builds 7 AI + LLM", org: "Warsaw, PL", year: "Nov 2024" },
+  { name: "Advanced Product Management", org: "Warsaw, PL", year: "Oct 2024" },
+  { name: "Statistics for Business Analytics and Data Science", org: "Warsaw, PL", year: "Oct 2024" },
+  { name: "R Programming for Data Science", org: "Warsaw, PL", year: "Aug 2024" },
+  { name: "SQL Bootcamp", org: "Warsaw, PL", year: "Aug 2024" },
+  { name: "Kubernetes Administrator Course", org: "Warsaw, PL", year: "Jan 2024" },
+  { name: "PRINCE2 Practitioner", org: "London, UK", year: "Dec 2015" },
+  { name: "PRINCE2 Foundation", org: "London, UK", year: "Nov 2015" },
+  { name: "ITIL Foundation", org: "London, UK", year: "Oct 2014" },
+  { name: "IELTS", org: "London, UK", year: "May 2013" },
+  { name: "CCNA (Cisco)", org: "Vinnitsa, Ukraine", year: "Nov 2008" },
 ];
 ---
 
 <section id="courses" class="px-6 py-28">
   <div class="mx-auto max-w-6xl">
     <h2 class="reveal eyebrow text-xs font-semibold uppercase text-[#a9791f] mb-3">Education</h2>
-    <h3 class="reveal font-serif-heading text-2xl sm:text-3xl text-[#111827] mb-12">Courses &amp; certifications</h3>
-    <ul class="reveal card-sheen divide-y divide-[#e3e6ec] rounded-xl border border-[#e3e6ec] bg-white shadow-[0_20px_40px_-30px_rgba(17,24,39,0.15)]">
-      {courses.map((course) => (
+    <h3 class="reveal font-serif-heading text-2xl sm:text-3xl text-[#111827] mb-12">Education &amp; certifications</h3>
+
+    <h4 class="reveal text-sm text-[#5b6472] mb-4">Education</h4>
+    <ul class="reveal card-sheen divide-y divide-[#e3e6ec] rounded-xl border border-[#e3e6ec] bg-white shadow-[0_20px_40px_-30px_rgba(17,24,39,0.15)] mb-12">
+      {education.map((item) => (
         <li class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 px-6 py-5 transition-colors hover:bg-[#f7f8fa]">
           <div>
-            <p class="text-[#111827]">{course.name}</p>
-            <p class="text-sm text-[#5b6472]">{course.org}</p>
+            <p class="text-[#111827]">{item.name}</p>
+            <p class="text-sm text-[#5b6472]">{item.org}</p>
           </div>
-          <span class="text-sm text-[#5b6472]">{course.year}</span>
+          <span class="text-sm text-[#5b6472]">{item.year}</span>
+        </li>
+      ))}
+    </ul>
+
+    <h4 class="reveal text-sm text-[#5b6472] mb-4">Certifications</h4>
+    <ul class="reveal card-sheen divide-y divide-[#e3e6ec] rounded-xl border border-[#e3e6ec] bg-white shadow-[0_20px_40px_-30px_rgba(17,24,39,0.15)] max-h-[26rem] overflow-y-auto">
+      {certifications.map((item) => (
+        <li class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 px-6 py-4 transition-colors hover:bg-[#f7f8fa]">
+          <div>
+            <p class="text-[#111827]">{item.name}</p>
+            <p class="text-sm text-[#5b6472]">{item.org}</p>
+          </div>
+          <span class="text-sm text-[#5b6472]">{item.year}</span>
         </li>
       ))}
     </ul>
