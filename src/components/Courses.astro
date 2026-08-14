@@ -5,21 +5,25 @@ const education = [
 ];
 
 const certifications = [
-  { name: "Cursor AI: Build Web App with AI", org: "Warsaw, PL", year: "Sept 2025" },
-  { name: "AI Video School Fundamentals", org: "Warsaw, PL", year: "Sept 2025" },
-  { name: "The Complete Python Bootcamp", org: "Warsaw, PL", year: "Aug 2025" },
-  { name: "OSINT: Open Source Intelligence", org: "Warsaw, PL", year: "Apr 2025" },
+  { name: "Mastering PRD: Step-by-Step Guide for Product Manager", org: "Udemy — W3 Product Management", year: "Jun 2026", hours: "1.5h" },
+  { name: "Application Security — The Complete Guide", org: "Udemy — Derek Fisher", year: "Nov 2025", hours: "11h" },
+  { name: "Cursor AI Beginner to Pro: Build Production Web Apps with AI", org: "Udemy — Tom Phillips", year: "Sept 2025", hours: "6.5h" },
+  { name: "Executive Briefing: Computer Vision", org: "Udemy — Kirill Eremenko", year: "Sept 2025", hours: "33m" },
+  { name: "AI Video School: Complete Beginner to Pro, Veo3, Runway & More", org: "Udemy — Dan Britain", year: "Sept 2025", hours: "24.5h" },
+  { name: "The Complete Python Bootcamp: From Zero to Hero", org: "Udemy — Jose Portilla", year: "Aug 2025", hours: "22.5h" },
+  { name: "OSINT: Open-Source Intelligence", org: "Udemy — Jeff Minakata", year: "Apr 2025", hours: "10.5h" },
   { name: "State Diploma, Polish B1 Level Exam", org: "Warsaw, PL", year: "Mar 2025" },
-  { name: "Master WordPress", org: "Warsaw, PL", year: "Mar 2025" },
-  { name: "The Complete Cyber Security Course", org: "Warsaw, PL", year: "Jan 2025" },
-  { name: "The Product Management for AI and Data Science", org: "Warsaw, PL", year: "Dec 2024" },
-  { name: "Blockchain and Crypto Foundation", org: "Warsaw, PL", year: "Dec 2024" },
-  { name: "AI Foundation: Builds 7 AI + LLM", org: "Warsaw, PL", year: "Nov 2024" },
-  { name: "Advanced Product Management", org: "Warsaw, PL", year: "Oct 2024" },
-  { name: "Statistics for Business Analytics and Data Science", org: "Warsaw, PL", year: "Oct 2024" },
-  { name: "R Programming for Data Science", org: "Warsaw, PL", year: "Aug 2024" },
-  { name: "SQL Bootcamp", org: "Warsaw, PL", year: "Aug 2024" },
-  { name: "Kubernetes Administrator Course", org: "Warsaw, PL", year: "Jan 2024" },
+  { name: "WordPress for Beginners: Master WordPress Quickly", org: "Udemy — Andrew Williams", year: "Mar 2025", hours: "12.5h" },
+  { name: "Leadership: The Emotionally Intelligent Leader", org: "Udemy — Robin Hills", year: "Feb 2025", hours: "6.5h" },
+  { name: "The Ultimate Kubernetes Administrator Course (CKA)", org: "TechWorld with Nana", year: "Jan 2025" },
+  { name: "The Complete Cyber Security Course: Hackers Exposed!", org: "Udemy — Nathan House", year: "Jan 2025", hours: "12h" },
+  { name: "The Product Management for AI & Data Science Course", org: "Udemy — 365 Careers, Danielle Thé", year: "Dec 2024", hours: "5h" },
+  { name: "Blockchain A-Z: Build a Blockchain, a Crypto + ChatGPT Prize", org: "Udemy — Hadelin de Ponteves, Kirill Eremenko", year: "Dec 2024", hours: "14.5h" },
+  { name: "Artificial Intelligence A-Z: Build 7 AI + LLM & ChatGPT", org: "Udemy — Hadelin de Ponteves, Kirill Eremenko", year: "Nov 2024", hours: "15.5h" },
+  { name: "Advanced Product Management: Vision, Strategy & Metrics", org: "Udemy — Cole Mercer, Evan Kimbrell", year: "Oct 2024", hours: "5.5h" },
+  { name: "Statistics for Business Analytics and Data Science A-Z", org: "Udemy — Kirill Eremenko", year: "Oct 2024", hours: "6h" },
+  { name: "R Programming A-Z: R For Data Science With Real Exercises", org: "Udemy — Kirill Eremenko", year: "Aug 2024", hours: "10.5h" },
+  { name: "The Complete SQL Bootcamp: Go from Zero to Hero", org: "Udemy — Jose Portilla", year: "Aug 2024", hours: "9h" },
   { name: "PRINCE2 Practitioner", org: "London, UK", year: "Dec 2015" },
   { name: "PRINCE2 Foundation", org: "London, UK", year: "Nov 2015" },
   { name: "ITIL Foundation", org: "London, UK", year: "Oct 2014" },
@@ -54,7 +58,9 @@ const certifications = [
             <p class="text-[#111827]">{item.name}</p>
             <p class="text-sm text-[#5b6472]">{item.org}</p>
           </div>
-          <span class="text-sm text-[#5b6472]">{item.year}</span>
+          <span class="text-sm text-[#5b6472] whitespace-nowrap">
+            {item.year}{item.hours ? ` · ${item.hours}` : ""}
+          </span>
         </li>
       ))}
     </ul>

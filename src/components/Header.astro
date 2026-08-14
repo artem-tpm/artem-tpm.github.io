@@ -26,5 +26,69 @@ const links = [
     >
       Get in touch
     </a>
+    <button
+      id="menu-toggle"
+      type="button"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+      class="sm:hidden inline-flex items-center justify-center w-9 h-9 -mr-2 text-[#111827]"
+    >
+      <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="hidden">
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+      </svg>
+    </button>
   </nav>
+  <div id="mobile-menu" class="hidden sm:hidden border-t border-[#e3e6ec] bg-white/95 backdrop-blur-md">
+    <ul class="flex flex-col px-6 py-4 text-sm text-[#5b6472]">
+      {links.map((link) => (
+        <li>
+          <a href={link.href} class="block py-3 hover:text-[#111827] transition-colors">{link.label}</a>
+        </li>
+      ))}
+    </ul>
+    <div class="px-6 pb-6">
+      <a
+        href="#contact"
+        class="flex items-center justify-center rounded-md bg-[#0f3d68] px-4 py-3 text-sm font-medium text-white hover:bg-[#0c3255] transition-colors"
+      >
+        Get in touch
+      </a>
+    </div>
+  </div>
 </header>
+
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("mobile-menu");
+  const iconOpen = document.getElementById("menu-icon-open");
+  const iconClose = document.getElementById("menu-icon-close");
+
+  const closeMenu = () => {
+    menu?.classList.add("hidden");
+    iconOpen?.classList.remove("hidden");
+    iconClose?.classList.add("hidden");
+    toggle?.setAttribute("aria-expanded", "false");
+  };
+
+  toggle?.addEventListener("click", () => {
+    const isOpen = !menu?.classList.contains("hidden");
+    if (isOpen) {
+      closeMenu();
+    } else {
+      menu?.classList.remove("hidden");
+      iconOpen?.classList.add("hidden");
+      iconClose?.classList.remove("hidden");
+      toggle?.setAttribute("aria-expanded", "true");
+    }
+  });
+
+  menu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+</script>
