@@ -1,0 +1,47 @@
+---
+const interests = ["AI experimentation", "AI news & podcasts", "Information security", "Swimming", "Cycling"];
+const languages = ["Ukrainian", "English", "Polish"];
+---
+
+<section id="beyond-work" class="mesh-bg px-6 py-28">
+  <div class="mx-auto max-w-6xl grid gap-12 md:grid-cols-5 md:gap-16">
+    <div class="reveal md:col-span-3">
+      <h2 class="eyebrow text-xs font-semibold uppercase text-[#a9791f] mb-3">Beyond Work</h2>
+      <p class="mt-3 text-[#5b6472] leading-relaxed">
+        I read across three languages — Ukrainian, English, and Polish —
+        mostly for the range of perspective it brings; each language surfaces
+        different sources, framing, and depth on the same topics.
+      </p>
+      <p class="mt-4 text-[#5b6472] leading-relaxed">
+        I keep a daily habit of AI news and information security podcasts
+        alongside books and articles in both spaces, which keeps me current on
+        a field that shifts weekly.
+      </p>
+      <p class="mt-4 text-[#5b6472] leading-relaxed">
+        I actively experiment with AI — both in domains I already know deeply
+        (to sharpen judgment on where it genuinely helps vs. where it doesn't)
+        and in new areas entirely, using it to compress the learning curve and
+        get to competence faster than I could unassisted.
+      </p>
+      <p class="mt-4 text-[#5b6472] leading-relaxed">Outside of screens: swimming and cycling.</p>
+    </div>
+    <div class="reveal md:col-span-2 content-start">
+      <h4 class="text-sm text-[#5b6472] mb-4">Languages</h4>
+      <div class="flex flex-wrap gap-2 mb-8">
+        {languages.map((lang) => (
+          <span class="rounded-full border border-[#d4d9e2] bg-white px-4 py-1.5 text-sm text-[#111827]">
+            {lang}
+          </span>
+        ))}
+      </div>
+      <h4 class="text-sm text-[#5b6472] mb-4">Interests</h4>
+      <div class="flex flex-wrap gap-2">
+        {interests.map((item) => (
+          <span class="rounded-full border border-[#d4d9e2] bg-white px-4 py-1.5 text-sm text-[#111827]">
+            {item}
+          </span>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

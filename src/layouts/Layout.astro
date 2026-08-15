@@ -7,8 +7,8 @@ interface Props {
 }
 
 const {
-  title = "Artem Zheleznyakov — Technical Program Manager",
-  description = "Portfolio of Artem Zheleznyakov, a Technical Program Manager and Delivery Leader based in Warsaw, Poland — 20+ years in IT, delivery, and product leadership.",
+  title = "Technical Product Manager — Portfolio",
+  description = "Portfolio of a Technical Product Manager and Delivery Leader based in Warsaw, Poland — 20+ years in IT, delivery, and product leadership.",
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -26,7 +26,7 @@ const ogImageURL = new URL("/og-image.png", Astro.site);
     <link rel="canonical" href={canonicalURL} />
 
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Artem Zheleznyakov — Technical Program Manager" />
+    <meta property="og:site_name" content="Technical Product Manager — Portfolio" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
@@ -42,8 +42,7 @@ const ogImageURL = new URL("/og-image.png", Astro.site);
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Artem Zheleznyakov",
-      "jobTitle": "Technical Program Manager",
+      "jobTitle": "Technical Product Manager",
       "url": String(canonicalURL),
       "email": "mailto:artem_tpm@protonmail.com",
       "image": String(ogImageURL),

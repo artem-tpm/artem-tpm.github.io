@@ -1,6 +1,7 @@
 ---
 const links = [
   { href: "#about", label: "About" },
+  { href: "#achievement", label: "Achievement" },
   { href: "#projects", label: "Projects" },
   { href: "#courses", label: "Courses" },
   { href: "#skills", label: "Skills" },
@@ -11,7 +12,7 @@ const links = [
 <header class="fixed top-0 inset-x-0 z-50 border-b border-[#e3e6ec] bg-white/85 backdrop-blur-md">
   <nav class="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
     <a href="#top" class="font-serif-heading text-lg tracking-tight text-[#111827]">
-      Artem <span class="text-[#0f3d68]">Zheleznyakov</span>
+      Technical <span class="text-[#0f3d68]">Product Manager</span>
     </a>
     <ul class="hidden sm:flex items-center gap-8 text-sm text-[#5b6472]">
       {links.map((link) => (
@@ -20,12 +21,22 @@ const links = [
         </li>
       ))}
     </ul>
-    <a
-      href="#contact"
-      class="btn-shine hidden sm:inline-flex items-center gap-2 rounded-md bg-[#0f3d68] px-4 py-2 text-sm font-medium text-white hover:bg-[#0c3255] transition-colors"
-    >
-      Get in touch
-    </a>
+    <div class="hidden sm:flex items-center gap-4">
+      <a
+        href="/resume.pdf"
+        download
+        class="inline-flex items-center gap-1.5 text-sm font-medium text-[#5b6472] hover:text-[#0f3d68] transition-colors"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        Download CV
+      </a>
+      <a
+        href="#contact"
+        class="btn-shine inline-flex items-center gap-2 rounded-md bg-[#0f3d68] px-4 py-2 text-sm font-medium text-white hover:bg-[#0c3255] transition-colors"
+      >
+        Get in touch
+      </a>
+    </div>
     <button
       id="menu-toggle"
       type="button"
@@ -52,7 +63,14 @@ const links = [
         </li>
       ))}
     </ul>
-    <div class="px-6 pb-6">
+    <div class="px-6 pb-6 flex flex-col gap-3">
+      <a
+        href="/resume.pdf"
+        download
+        class="flex items-center justify-center gap-2 rounded-md border border-[#d4d9e2] px-4 py-3 text-sm font-medium text-[#111827] hover:border-[#0f3d68] hover:text-[#0f3d68] transition-colors"
+      >
+        Download CV
+      </a>
       <a
         href="#contact"
         class="flex items-center justify-center rounded-md bg-[#0f3d68] px-4 py-3 text-sm font-medium text-white hover:bg-[#0c3255] transition-colors"

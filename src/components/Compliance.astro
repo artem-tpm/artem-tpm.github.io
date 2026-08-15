@@ -1,0 +1,44 @@
+---
+const domains = [
+  { name: "Data protection", description: "User data handling, storage, and privacy safeguards" },
+  { name: "Data transfer", description: "Cross-border and third-party data flow compliance" },
+  { name: "SDK & third-party software usage", description: "Tracking and vetting integrations for legal and privacy risk" },
+  { name: "User input moderation", description: "Language filtering to prevent abusive or non-compliant content" },
+  { name: "GDPR compliance", description: "Ensuring product behavior and data practices met regulatory standards" },
+  { name: "Age compliance", description: "Age-gating and related protections for underage users" },
+  { name: "Mobile store compliance", description: "Alignment with Apple App Store and Google Play policy requirements" },
+  { name: "User deletion flow", description: "Building and maintaining compliant account/data deletion processes" },
+];
+---
+
+<section id="compliance" class="mesh-bg px-6 py-28">
+  <div class="mx-auto max-w-6xl">
+    <h2 class="reveal eyebrow text-xs font-semibold uppercase text-[#a9791f] mb-3">Legal & Regulatory</h2>
+    <h3 class="reveal font-serif-heading text-2xl sm:text-3xl text-[#111827] mb-4">
+      Product compliance &amp; legal alignment
+    </h3>
+    <p class="reveal max-w-3xl text-[#5b6472] leading-relaxed mb-12">
+      Partnered closely with legal teams to ensure products remained legally
+      protected and aligned with evolving regulatory and platform
+      requirements — acting as the technical bridge between product decisions
+      and legal obligations. Owned and maintained compliance reporting and
+      documentation across:
+    </p>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {domains.map((item) => (
+        <div class="reveal card-elevate card-sheen spotlight rounded-xl border border-[#e3e6ec] bg-white p-5">
+          <h4 class="text-sm font-medium text-[#111827]">{item.name}</h4>
+          <p class="mt-2 text-sm text-[#5b6472] leading-relaxed">{item.description}</p>
+        </div>
+      ))}
+    </div>
+    <p class="reveal mt-12 max-w-3xl text-[#5b6472] leading-relaxed">
+      This work required translating dense legal and regulatory requirements
+      into concrete product and engineering specifications — and conversely,
+      flagging technical constraints back to legal teams before they became
+      compliance risks. It's given me a working fluency in privacy and
+      platform regulation that shapes how I scope products from day one,
+      rather than treating compliance as an afterthought.
+    </p>
+  </div>
+</section>

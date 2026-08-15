@@ -1,0 +1,53 @@
+---
+const areas = [
+  {
+    title: "Infrastructure & Network Operations",
+    description:
+      "Maintained and configured core network equipment (switches, routers, firewalls), wireless infrastructure, and cable/server room environments, ensuring reliable connectivity and uptime across the branch.",
+  },
+  {
+    title: "Systems Administration",
+    description:
+      "Handled the full lifecycle of production systems from bare-metal hardware setup through configuration, including mail infrastructure across both Windows Exchange and Unix systems. Managed and maintained backup systems and infrastructure to ensure data resilience and recoverability across production environments.",
+  },
+  {
+    title: "Telephony & Communications",
+    description:
+      "Deployed and maintained VoIP systems and internal telephone network infrastructure, supporting day-to-day business communications across the office.",
+  },
+  {
+    title: "Security",
+    description:
+      "Managed information and physical security systems for the building, covering both access control and infrastructure-level protections.",
+  },
+];
+---
+
+<section id="systems-background" class="px-6 py-28">
+  <div class="mx-auto max-w-6xl">
+    <h2 class="reveal eyebrow text-xs font-semibold uppercase text-[#a9791f] mb-3">Technical Foundation</h2>
+    <h3 class="reveal font-serif-heading text-2xl sm:text-3xl text-[#111827] mb-4">
+      Systems &amp; network engineering background
+    </h3>
+    <p class="reveal max-w-3xl text-[#5b6472] leading-relaxed mb-12">
+      Owned end-to-end IT infrastructure for a 200+ employee branch office,
+      spanning network operations, server administration, and physical
+      security systems.
+    </p>
+    <div class="grid gap-6 sm:grid-cols-2">
+      {areas.map((area) => (
+        <div class="reveal card-elevate card-sheen spotlight rounded-xl border border-[#e3e6ec] bg-white p-6">
+          <h4 class="text-lg font-medium text-[#111827]">{area.title}</h4>
+          <p class="mt-3 text-sm text-[#5b6472] leading-relaxed">{area.description}</p>
+        </div>
+      ))}
+    </div>
+    <p class="reveal mt-12 max-w-3xl text-[#5b6472] leading-relaxed">
+      This role built a hands-on foundation across the full technical stack —
+      from physical hardware to network architecture to production systems —
+      that later shaped how I approach product decisions as a technical PM: an
+      instinct for infrastructure trade-offs, operational risk, and what
+      "production-grade" actually requires.
+    </p>
+  </div>
+</section>

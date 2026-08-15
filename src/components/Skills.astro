@@ -6,15 +6,19 @@ const groups = [
   },
   {
     label: "Delivery & Product",
-    items: ["Delivery Management", "Product Ownership", "Agile / Scrum", "ITIL", "PRINCE2"],
+    items: ["Delivery Management", "Product Ownership", "Agile / Scrum", "ITIL", "PRINCE2", "Jira", "Confluence", "Monday"],
   },
   {
     label: "Technical & Data",
-    items: ["Python", "SQL", "R", "Kubernetes", "Linux / Unix", "Windows Servers", "WordPress", "Blockchain"],
+    items: ["Python", "SQL", "Vertica", "OpenSearch", "R", "Kubernetes", "Linux / Unix", "Windows Servers", "WordPress", "Blockchain"],
+  },
+  {
+    label: "Infrastructure",
+    items: ["Switches, Routers & Firewalls", "Windows Exchange", "VoIP Systems"],
   },
   {
     label: "AI & Creative Tools",
-    items: ["ChatGPT", "Grok", "Cursor AI", "RunwayML", "MidJourney", "ElevenLabs", "Suno", "Udio", "DaVinci Resolve"],
+    items: ["Claude Code", "ChatGPT", "Grok", "Cursor AI", "RunwayML", "MidJourney", "ElevenLabs", "Suno", "Udio", "DaVinci Resolve"],
   },
 ];
 ---
@@ -22,7 +26,10 @@ const groups = [
 <section id="skills" class="mesh-bg px-6 py-28">
   <div class="mx-auto max-w-6xl">
     <h2 class="reveal eyebrow text-xs font-semibold uppercase text-[#a9791f] mb-3">Capabilities</h2>
-    <h3 class="reveal font-serif-heading text-2xl sm:text-3xl text-[#111827] mb-12">Languages &amp; technologies</h3>
+    <h3 class="reveal font-serif-heading text-2xl sm:text-3xl text-[#111827] mb-4">Languages &amp; technologies</h3>
+    <p class="reveal text-sm text-[#5b6472] mb-12">
+      Prefer the short version? <a href="/resume.pdf" download class="text-[#0f3d68] hover:underline">Download the full skill set as a PDF</a>.
+    </p>
     <div class="grid gap-8 sm:grid-cols-2">
       {groups.map((group) => (
         <div class="reveal">

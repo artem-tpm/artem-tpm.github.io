@@ -1,0 +1,42 @@
+---
+const prototypes = [
+  {
+    title: "Marketing campaign prototype",
+    description:
+      "Built an end-to-end advertising campaign concept for a real estate use case, using AI tools to move from concept to polished creative output significantly faster than traditional workflows.",
+  },
+  {
+    title: "Website prototypes",
+    description:
+      "Designed and built multiple websites spanning different content types and use cases, using AI-assisted design and development tools to go from concept to functioning product without a traditional build team.",
+  },
+];
+---
+
+<section id="ai-prototypes" class="px-6 py-28">
+  <div class="mx-auto max-w-6xl">
+    <h2 class="reveal eyebrow text-xs font-semibold uppercase text-[#a9791f] mb-3">Hands-On AI</h2>
+    <h3 class="reveal font-serif-heading text-2xl sm:text-3xl text-[#111827] mb-4">AI-built prototypes</h3>
+    <p class="reveal max-w-3xl text-[#5b6472] leading-relaxed mb-12">
+      Independently designed and built a range of AI-assisted prototypes to
+      explore how generative and agentic AI tools can accelerate
+      concept-to-output timelines across different domains.
+      <span class="text-[#5b6472]/80">(Details under NDA; descriptions kept high-level.)</span>
+    </p>
+    <div class="grid gap-6 sm:grid-cols-2">
+      {prototypes.map((item) => (
+        <div class="reveal card-elevate card-sheen spotlight rounded-xl border border-[#e3e6ec] bg-white p-6">
+          <h4 class="text-lg font-medium text-[#111827]">{item.title}</h4>
+          <p class="mt-3 text-sm text-[#5b6472] leading-relaxed">{item.description}</p>
+        </div>
+      ))}
+    </div>
+    <p class="reveal mt-12 max-w-3xl text-[#5b6472] leading-relaxed">
+      This hands-on exploration reflects a broader interest in how AI tools
+      reshape the speed and shape of product development — not just as a user
+      of AI features in products I manage, but as a builder using these tools
+      directly, which sharpens my judgment on what's realistic to promise when
+      AI capabilities come up in product roadmaps.
+    </p>
+  </div>
+</section>

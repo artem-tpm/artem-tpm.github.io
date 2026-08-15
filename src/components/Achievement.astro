@@ -1,0 +1,54 @@
+---
+const highlights = [
+  { value: "10+", label: "studios adopted the platform" },
+  { value: "2017", label: "founded as sole product owner" },
+  { value: "Ongoing", label: "still owned for a flagship studio" },
+];
+---
+
+<section id="achievement" class="mesh-bg px-6 py-28">
+  <div class="mx-auto max-w-6xl grid gap-12 md:grid-cols-5 md:gap-16">
+    <div class="reveal md:col-span-3">
+      <h2 class="eyebrow text-xs font-semibold uppercase text-[#a9791f] mb-3">Signature Work</h2>
+      <h3 class="font-serif-heading text-2xl sm:text-3xl text-[#111827] leading-snug">
+        Operational CRM Platform — Back-Office Automation for Live-Ops Gaming
+      </h3>
+      <p class="mt-6 text-[#5b6472] leading-relaxed">
+        Owned the end-to-end product for a back-office CRM system supporting live
+        operations across a mobile gaming organization, from 2017 through its
+        evolution from a single monolithic platform into a distributed model
+        adopted by 10+ independent studios.
+      </p>
+      <p class="mt-4 text-[#5b6472] leading-relaxed">
+        As the product's original owner, I defined the core configuration
+        architecture — UI/UX for the configuration modules, the underlying file
+        structure, and asset management — decisions that shaped how safely and
+        quickly operational teams could ship changes to production. When the
+        platform split from a single shared system into studio-specific
+        instances, I stayed on as owner for one of the largest studios while
+        supporting other teams through their onboarding, effectively acting as
+        the product's institutional memory during a major architectural
+        transition.
+      </p>
+      <p class="mt-4 text-[#5b6472] leading-relaxed">
+        The system's value compounds directly with its adoption: every
+        configuration workflow it automates removes a manual, error-prone step
+        from day-to-day operations — reducing production downtime, minimizing
+        configuration mistakes that reach live environments, and cutting the
+        operational load on teams managing customer-facing features. Long-term
+        ownership of a platform this central to daily operations meant
+        balancing UX simplicity for non-technical operators against the
+        flexibility power users needed — a tension I navigated continuously as
+        the product matured.
+      </p>
+    </div>
+    <div class="reveal md:col-span-2 grid grid-cols-1 gap-4 content-start sm:grid-cols-3 sm:gap-4 md:grid-cols-1">
+      {highlights.map((item) => (
+        <div class="card-elevate card-sheen spotlight rounded-xl border border-[#e3e6ec] bg-white p-5">
+          <div class="font-serif-heading text-3xl text-[#0f3d68]">{item.value}</div>
+          <div class="mt-1 text-sm text-[#5b6472]">{item.label}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
